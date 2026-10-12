@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prancha 1 — Território e Lugar — Rua Duarte Lobo 38, Évora — Grupo 04</title>
+<style>
+  :root{
+    --bg:#f4efe6; --paper:#ffffff; --ink:#201d18; --muted:#6f675c;
+    --accent:#9a3b26; --accent2:#1d5c4d; --sand:#e8ddc9; --line:#d9cfbd;
+    --terra:#c96f3f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  header.hero{background:#1e1c18;color:#f7f3ec;padding:26px 30px;border-bottom:6px solid var(--terra)}
+  header.hero h1{margin:0;font-size:28px;letter-spacing:.3px}
+  header.hero h1 span{color:var(--sand);font-weight:400;font-size:20px}
+  header.hero p.sub{margin:6px 0 0;color:#d9cfbd;font-size:13px;letter-spacing:1.4px;text-transform:uppercase}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .pill{background:#2e2b26;border:1px solid #4a453d;border-radius:999px;padding:6px 13px;font-size:12.5px}
+  .pill b{color:#fff}
+  .wrap{max-width:1300px;margin:0 auto;padding:22px 18px 60px}
+  section.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+  section.card h2{margin:0 0 4px;font-size:18px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;border-bottom:3px solid var(--sand);padding-bottom:8px}
+  section.card h2 small{display:block;color:var(--muted);font-size:11.5px;font-weight:400;letter-spacing:.6px;text-transform:none}
+  section.card h3{margin:16px 0 6px;font-size:14.5px;color:var(--accent2)}
+  p.kicker{font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:0}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
+  th{background:#1e1c18;color:#fff;text-align:left;padding:8px 9px;font-size:11.5px;text-transform:uppercase;letter-spacing:.4px}
+  td{border:1px solid var(--line);padding:7px 9px;vertical-align:top}
+  tr:nth-child(even) td{background:#faf7f1}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:950px){.grid2{grid-template-columns:1fr}}
+  .maps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+  @media(max-width:950px){.maps{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.maps{grid-template-columns:1fr}}
+  .mapbox{border:1.5px dashed #a99e89;border-radius:10px;background:#fbf9f4;padding:12px;min-height:200px;display:flex;flex-direction:column}
+  .mapbox strong{font-size:12.5px;display:block;margin:8px 0 4px}
+  .mapbox span{font-size:11.5px;color:var(--muted)}
+  .mapbox svg{width:100%;height:auto;background:#f1ece0;border-radius:8px}
+  .figground{background:#f1ece0;border-left:6px solid var(--terra);padding:12px 14px;border-radius:0 10px 10px 0;font-size:13.5px;margin-top:10px}
+  .dims{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+  @media(max-width:1000px){.dims{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.dims{grid-template-columns:1fr}}
+  .dim{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+  .dim header{background:var(--accent2);color:#fff;padding:8px 12px;font-size:12.5px;font-weight:800}
+  .dim:nth-child(1) header,.dim:nth-child(9) header{background:var(--accent)}
+  .dim .body{padding:10px 12px;font-size:12.8px}
+  .dim .body dt{font-weight:800;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-top:8px}
+  .dim .body dd{margin:2px 0 0}
+  .leads{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+  @media(max-width:800px){.leads{grid-template-columns:1fr}}
+  .lead{background:#1d5c4d;color:#eef5ef;border-radius:12px;padding:14px;font-size:13px}
+  .lead:nth-child(2){background:#9a3b26}
+  .lead:nth-child(3){background:#2e2b26}
+  .lead strong{display:block;margin-bottom:6px;font-size:13.5px}
+  .warn{background:#fff7e6;border:1px solid #e6c87a;border-radius:10px;padding:12px 14px;font-size:12.8px;margin-top:10px}
+  footer{font-size:11.5px;color:var(--muted);text-align:center;padding:18px;line-height:1.7}
+  .nuts{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .nuts div{background:#faf7f1;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:12.5px;flex:1;min-width:180px}
+  @media print{
+    @page{size:A1 landscape;margin:10mm}
+    body{background:#fff}
+    header.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section.card{box-shadow:none;break-inside:avoid}
+    .wrap{max-width:none;padding:0}
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <p class="sub">IAAA · Grupo 04 · NUTS III Alentejo Central · Prancha 1 — Território e Lugar</p>
+  <h1>Território e Lugar <span>— NUTS, plantas, figura-fundo, quadro INE/Pordata e nove dimensões</span></h1>
+  <div class="pills">
+    <div class="pill"><b>Sítio:</b> Rua Duarte Lobo 38, Évora, Portugal</div>
+    <div class="pill"><b>NUTS III:</b> Alentejo Central · <b>Concelho:</b> Évora</div>
+    <div class="pill"><b>WGS84:</b> 38.555742° N, −7.923403° W · 38°33′20.67″N, 7°55′24.25″W</div>
+    <div class="pill"><b>Altitude:</b> 251 m (Google Earth)</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- 1 TERRITORIO -->
+  <section class="card">
+    <p class="kicker">P0 · Base territorial + localização</p>
+    <h2>1 · Território — NUTS III Alentejo Central / Évora <small>Datum WGS84 · Decimal + DMS · Altitude com fonte</small></h2>
+    <div class="nuts">
+      <div><b>PT — NUTS I:</b> Portugal Continental<br><b>NUTS II:</b> Alentejo (PT18)<br><b>NUTS III:</b> Alentejo Central (PT186)</div>
+      <div><b>Concelho:</b> Évora<br><b>Lote:</b> Rua Duarte Lobo 38 — vazio urbano de colmatação (infill), parcela retangular alongada N–S</div>
+      <div><b>Dupla frente:</b> N — Rua Duarte Lobo · S — Rua Frei Miguel (n.º 38)<br><b>Envolvente:</b> moradias unifamiliares 1–2 pisos, muros de rua contínuos</div>
+      <div><b>Coordenadas:</b> 38.555742, −7.923403<br>38°33′20.67″N, 7°55′24.25″W · Alt. 251 m</div>
+    </div>
+    <div class="figground"><b>Leitura territorial:</b> expansão suburbana consolidada de Évora, a Este do centro histórico. Malha ortogonal de quarteirões residenciais de grão fino. O lote 38 é um vazio intersticial entre frentes construídas — atravessa o quarteirão de Norte (Duarte Lobo) a Sul (Frei Miguel), ladeado por habitação unifamiliar geminada/isolada com cobertura em telha.</div>
+  </section>
+
+  <!-- 2 PLANTAS + FIGURA-FUNDO + FOTOS -->
+  <section class="card">
+    <p class="kicker">P2 (a)(b) · Plantas, figura-fundo e fotografia de campo</p>
+    <h2>2 · Plantas, figura-fundo e foto <small>Indicar fonte + data em cada peça — substituir esquemas por capturas para entrega</small></h2>
+    <div class="maps">
+      <div class="mapbox">
+        <svg viewBox="0 0 220 150">
+          <rect x="5" y="5" width="210" height="140" fill="#efe9d8" stroke="#1e1c18"/>
+          <text x="12" y="22" font-size="9" font-weight="800" fill="#1e1c18">NUTS III · ALENTEJO CENTRAL</text>
+          <polygon points="70,45 130,40 140,90 110,120 60,110 55,70" fill="none" stroke="#9a3b26" stroke-width="2"/>
+          <circle cx="95" cy="85" r="6" fill="#9a3b26"/><text x="105" y="88" font-size="9" font-weight="700" fill="#9a3b26">Évora ★</text>
+          <text x="12" y="136" font-size="7" fill="#6f675c">PT186 · Évora no centro da NUTS</text>
+        </svg>
+        <strong>1 · Enquadramento NUTS III — 1 km / território</strong>
+        <span>Portugal → Alentejo → Alentejo Central → Évora ★. Base: CAOP / Eurostat. Inserir captura 1 km com Circular N380 e centro histórico.</span>
+      </div>
+      <div class="mapbox">
+        <svg viewBox="0 0 220 170">
+          <rect x="5" y="5" width="210" height="160" fill="#f1ece0" stroke="#1e1c18"/>
+          <!-- streets -->
+          <rect x="5" y="30" width="210" height="14" fill="#fff" stroke="#999"/>
+          <text x="10" y="40" font-size="7" font-weight="700">R. DUARTE LOBO (N)</text>
+          <rect x="5" y="125" width="210" height="14" fill="#fff" stroke="#999"/>
+          <text x="10" y="135" font-size="7" font-weight="700">R. FREI MIGUEL (S)</text>
+          <!-- built -->
+          <g fill="#1e1c18">
+            <rect x="15" y="48" width="35" height="28"/><rect x="55" y="48" width="30" height="28"/>
+            <rect x="135" y="48" width="35" height="28"/><rect x="175" y="48" width="30" height="28"/>
+            <rect x="15" y="92" width="35" height="28"/><rect x="135" y="92" width="35" height="28"/><rect x="175" y="92" width="30" height="28"/>
+          </g>
+          <!-- vacant lot -->
+          <rect x="90" y="48" width="40" height="72" fill="#c96f3f" fill-opacity=".35" stroke="#9a3b26" stroke-width="1.5" stroke-dasharray="4 2"/>
+          <text x="93" y="88" font-size="7" font-weight="800" fill="#9a3b26">LOTE 38</text>
+          <text x="93" y="97" font-size="6" fill="#9a3b26">vazio N–S</text>
+          <text x="12" y="160" font-size="7" fill="#6f675c">~500×500 m · barra 50 m · N ↑</text>
+        </svg>
+        <strong>2 · Planta envolvente 500 m + figura-fundo</strong>
+        <span>Cheio = preto (100–200 m², 1–2 pisos, telha). Vazio = branco. Lote 38 a vermelho/terracota como vazio de colmatação N–S. Fonte: Google Maps Satélite / Airbus, Maxar Technologies, c.2024–2026.</span>
+      </div>
+      <div class="mapbox">
+        <svg viewBox="0 0 220 150">
+          <rect width="220" height="150" fill="#87a8c8"/>
+          <rect y="95" width="220" height="55" fill="#c9bd9f"/>
+          <polygon points="0,95 60,60 60,95" fill="#fff"/><polygon points="160,95 220,55 220,95" fill="#fff"/>
+          <polygon points="60,60 160,60 160,95 60,95" fill="#e8ddc9"/>
+          <text x="70" y="82" font-size="7" fill="#6f675c">lote herbáceo seco</text>
+          <text x="10" y="20" font-size="8" font-weight="700" fill="#fff">FOTO — R. FREI MIGUEL → N/NE</text>
+        </svg>
+        <strong>3 · Fotografia de campo — vista N/NE</strong>
+        <span>Google Street View 06/2014, posição na Rua Frei Miguel olhando N/NE através do lote vazio para a Rua Duarte Lobo. Capim ruderal seco, muros brancos laterais, moradias telha ao fundo. <b>Colar aqui captura 09/2024 + 06/2014.</b></span>
+      </div>
+      <div class="mapbox">
+        <svg viewBox="0 0 220 150">
+          <rect width="220" height="150" fill="#fbf9f4" stroke="#1e1c18"/>
+          <line x1="20" y1="120" x2="200" y2="120" stroke="#1e1c18" stroke-width="2"/>
+          <rect x="30" y="70" width="50" height="50" fill="#1e1c18"/><polygon points="30,70 55,50 80,70" fill="#9a3b26"/>
+          <rect x="90" y="85" width="40" height="35" fill="none" stroke="#9a3b26" stroke-width="1.5" stroke-dasharray="3 2"/><text x="92" y="105" font-size="7" font-weight="700" fill="#9a3b26">LOTE</text>
+          <rect x="140" y="70" width="50" height="50" fill="#1e1c18"/><polygon points="140,70 165,50 190,70" fill="#9a3b26"/>
+          <text x="30" y="135" font-size="7">S · Frei Miguel</text><text x="140" y="135" font-size="7">N · Duarte Lobo</text>
+          <text x="85" y="40" font-size="8" font-weight="700">CORTE ESQUEMÁTICO E–W</text>
+        </svg>
+        <strong>4 · Corte esquemático + confrontações</strong>
+        <span>1–2 pisos, empenas cegas / muros, cércea 6,0–7,5 m. E/W: moradias com telha 2 águas. S: Rua Frei Miguel. N: Rua Duarte Lobo. Sem escala — levantar topografia.</span>
+      </div>
+    </div>
+    <div class="figground"><b>Figura-fundo — padrão cheio/vazio:</b> morfologia suburbana de baixa densidade, grão fino, pegadas 100–200 m² formando frentes de rua semi-contínuas. Estrutura parcelar: lote infill alongado ligando Rua Frei Miguel (Sul) à Rua Duarte Lobo (Norte), vazio retangular rodeado de unifamiliares. Distinção frente pública edificada / interior de quarteirão com logradouros e pátios privados.</div>
+    <table>
+      <tr><th>Peça</th><th>Fonte / data a citar na entrega</th></tr>
+      <tr><td><b>Aérea / satélite</b></td><td>Google Maps / Airbus &amp; Maxar Technologies Data (c.2024–2026) — captura com pin + barra 20 m</td></tr>
+      <tr><td><b>Foto terreno</b></td><td>Google Street View 06/2014, 38 R. Frei Miguel, vista N/NE — complementar com 09/2024 e 09/2023</td></tr>
+    </table>
+  </section>
+
+  <!-- 3 QUADRO INE -->
+  <section class="card">
+    <p class="kicker">P1-TAB · Só INE + Pordata · valor + ano + tabela em cada célula</p>
+    <h2>3 · Quadro socioeconómico — Évora vs NUTS III Alentejo Central <small>Leitura orientada a programa</small></h2>
+    <table>
+      <thead><tr><th>Indicator</th><th>Évora</th><th>NUTS III Alentejo Central</th><th>Year</th><th>Source / table</th></tr></thead>
+      <tbody>
+        <tr><td><b>Resident population</b></td><td>53,577</td><td>152,507</td><td>2021</td><td>INE, Census 2021</td></tr>
+        <tr><td><b>2011–2021 variation (%)</b></td><td>−5.3%</td><td>−8.5%</td><td>2011–2021</td><td>INE, Census 2021</td></tr>
+        <tr><td><b>Ageing index</b></td><td>192.4</td><td>225.1</td><td>2021</td><td>INE, Census 2021</td></tr>
+        <tr><td><b>Density (inh/km²)</b></td><td>41.0</td><td>20.6</td><td>2021</td><td>INE, Census 2021 / Pordata</td></tr>
+        <tr><td><b>Dwellings (n.)</b></td><td>32,872</td><td>100,535</td><td>2021</td><td>INE, Census 2021</td></tr>
+        <tr><td><b>Higher education (%)</b></td><td>26.2%</td><td>18.1%</td><td>2021</td><td>INE, Census 2021</td></tr>
+        <tr><td><b>Unemployment rate (%)</b></td><td>7.2%</td><td>7.9%</td><td>2021</td><td>INE, Census 2021</td></tr>
+        <tr><td><b>Per capita purchasing power (index)</b></td><td>104.9</td><td>91.5</td><td>2021</td><td>INE, Indicador do Poder de Compra Concelhio (IPCC)</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12.5px;color:var(--muted)">Leitura: Évora perde −5.3% (menos que a NUTS −8.5%), envelhecimento alto (192.4), mas escolarização (26.2%) e poder de compra (104.9 &gt; média nacional) acima da NUTS — programa deve prever acessibilidade/visitabilidade e flexibilidade tipológica.</p>
+  </section>
+
+  <!-- 4 NOVE DIMENSOES -->
+  <section class="card">
+    <p class="kicker">P2 · Nove dimensões obrigatórias — Condição · Fonte · Implicação</p>
+    <h2>4 · Nove dimensões do lugar <small>Cada dimensão em tabela própria na entrega impressa</small></h2>
+    <div class="dims">
+      <div class="dim"><header>1 · Paleta cromática dominante</header><div class="body">
+        <dt>Condition</dt><dd>Fachadas em alvenaria rebocada branca lisa, telhas cerâmicas terracota vermelho/laranja, cascalho/solo bege e cobertura herbácea sazonal bege/verde-pálido seco.</dd>
+        <dt>Source</dt><dd>Inspeção visual foto do lote (Foto_Lote.jpg) e imagem satélite.</dd>
+        <dt>Design implication</dt><dd>Adotar acabamentos exteriores claros/brancos (caiação ou reboco branco) e tons terracota tradicionais.</dd></div></div>
+      <div class="dim"><header>2 · Solo</header><div class="body">
+        <dt>Condition</dt><dd>Embasamento granítico/gnáissico (Carta Geológica 40-A Évora); camada superficial de aterro urbano remexido e solo areno-argiloso.</dd>
+        <dt>Source</dt><dd>LNEG Folha 40-A Évora &amp; inspeção ao local.</dd>
+        <dt>Design implication</dt><dd>Fundação direta superficial (sapatas/ lintéis) no horizonte competente granítico alterado; exigir ensaio geotécnico.</dd></div></div>
+      <div class="dim"><header>3 · Vegetação e fauna</header><div class="body">
+        <dt>Condition</dt><dd>Herbáceas ruderais sazonais e ervas secas no lote; lotes vizinhos com pequenas hortas/jardins domésticos de arbustivas alentejanas.</dd>
+        <dt>Source</dt><dd>Fotografias do lote.</dd>
+        <dt>Design implication</dt><dd>Limpeza total de brush ruderal. Introduzir flora mediterrânica nativa (<i>Olea europaea</i>, alfazema, alecrim) em xeriscaping.</dd></div></div>
+      <div class="dim"><header>4 · Risco sísmico</header><div class="body">
+        <dt>Condition</dt><dd>Perigosidade moderada a baixa (Distrito Évora — Zona 2.5 / 1.5 per Eurocódigo 8 / NP EN 1998-1).</dd>
+        <dt>Source</dt><dd>IPMA / Eurocode 8 (NP EN 1998-1).</dd>
+        <dt>Design implication</dt><dd>Pórticos BA correntes ou paredes estruturais alvenaria per disposições padrão EC8.</dd></div></div>
+      <div class="dim"><header>5 · Risco de cheia</header><div class="body">
+        <dt>Condition</dt><dd>Risco extremamente baixo. Topografia ondulada elevada ~251 m, fora de linhas de água.</dd>
+        <dt>Source</dt><dd>Google Earth, SNIRH / APA bacias hidrográficas.</dd>
+        <dt>Design implication</dt><dd>Foco em drenagem pluvial localizada (poços infiltração, pavimentos permeáveis) para evitar escorrência para a rua.</dd></div></div>
+      <div class="dim"><header>6 · Risco e histórico de incêndio</header><div class="body">
+        <dt>Condition</dt><dd>Baixo risco florestal por inserção totalmente urbana. Capim seco sazonal = perigo combustível localizado menor.</dd>
+        <dt>Source</dt><dd>ANEPC / ICNF cartas municipais perigosidade incêndio florestal.</dd>
+        <dt>Design implication</dt><dd>Gestão de combustível / limpeza antes e durante obra. Revestimentos exteriores não-combustíveis.</dd></div></div>
+      <div class="dim"><header>7 · Poluição e ruído</header><div class="body">
+        <dt>Condition</dt><dd>Baixa poluição industrial; ruído residencial baixo a moderado ao longo da Rua Frei Miguel e Rua Duarte Lobo.</dd>
+        <dt>Source</dt><dd>Análise traçado rua a partir de satélite / street view.</dd>
+        <dt>Design implication</dt><dd>Caixilharia dupla e isolamento térmico/acústico de fachada cumprem conforto corrente.</dd></div></div>
+      <div class="dim"><header>8 · Infraestruturas</header><div class="body">
+        <dt>Condition</dt><dd>Bairro totalmente servido: acesso pavimentado, BT, água municipal, esgoto e telecoms.</dd>
+        <dt>Source</dt><dd>Confirmação visual de infraestrutura arruamento.</dd>
+        <dt>Design implication</dt><dd>Ligação direta às redes municipais pelas frentes Rua Frei Miguel ou Rua Duarte Lobo.</dd></div></div>
+      <div class="dim"><header>9 · Forma construída</header><div class="body">
+        <dt>Condition</dt><dd>Envolvido por moradias unifamiliares isoladas/geminadas 1–2 pisos, telhados inclinados cerâmicos e empenas cegas laterais.</dd>
+        <dt>Source</dt><dd>Inspeção visual edifícios adjacentes.</dd>
+        <dt>Design implication</dt><dd>Volumetria alinhada a beirais/cumeeiras vizinhas (1–2 pisos), manter continuidade de muro de rua.</dd></div></div>
+    </div>
+  </section>
+
+  <!-- 5 PISTAS -->
+  <section class="card">
+    <p class="kicker">P2 · Síntese projetual</p>
+    <h2>5 · Três pistas de projeto + o que falta verificar</h2>
+    <div class="leads">
+      <div class="lead"><strong>1 · Porosidade de dupla frente / passagem</strong>Capitalizar dupla frente: separar entrada pedonal numa face e acesso viário/serviços na outra (Frei Miguel ↔ Duarte Lobo).</div>
+      <div class="lead"><strong>2 · Pátio central (casa-pátio)</strong>Usar profundidade do lote para pátio privado central: luz a compartimentos profundos, privacidade em paredes meãs, ventilação cruzada N–S com ventos N/NW.</div>
+      <div class="lead"><strong>3 · Continuidade climática e material</strong>Respeitar massa térmica vernacular: paredes espessas claras, vãos profundos, telha cerâmica alto desempenho, sombreamento exterior Mai–Out.</div>
+    </div>
+    <div class="warn"><b>Não verificável — levantar no local / CM Évora:</b> capacidade de carga geotécnica e estratigrafia exata; cotas de soleira e níveis de ramais sob passeio; pinos cadastrais (levantamento topométrico). PDM: Solo Urbano — Espaços Residenciais (Consolidados), cércea 1–2 pisos (~6.0–7.5 m). Rejeitar tipologias fora de escala / códigos estrangeiros.</div>
+    <p style="font-size:11.5px;color:var(--muted)">Formato obrigatório P0: decimal + DMS, datum WGS84; altitude m com fonte; cada indicador INE/Pordata com valor + ano + tabela. Fontes visuais: Google Maps/Airbus-Maxar c.2024–2026, Street View 06/2014, LNEG 40-A, IPMA/EC8, SNIRH/APA, ANEPC/ICNF. Imprimir → Guardar como PDF (A1 paisagem, 150 dpi).</p>
+  </section>
+
+</div>
+<footer>Grupo 04 · NUTS III Alentejo Central · Rua Duarte Lobo 38, Évora — 38.555742°N, −7.923403°W · 251 m · Prancha 1 Território e Lugar</footer>
+</body>
+</html>
