@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>IAAA · 4 Boards — Territory · Climate · Culture · Synthesis</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#283618;--cream:#FEFAE0;--paper:#FEFAE0;--yellow:#DDA15E;--terra:#BC6C25;--ink:#283618;--muted:#606C38;--line:#DDA15E}
+/* Olive Garden Feast palette: 606C38 olive · 283618 deep green · FEFAE0 cream · DDA15E tan · BC6C25 burnt orange */
+*{box-sizing:border-box}html,body{height:100%;margin:0}.reveal{font-family:Inter,system-ui,sans-serif;color:var(--ink)}
+.reveal .slides{padding-top:48px}.reveal .slides section{padding:18px 2.4vw 42px;max-height:calc(100dvh - 52px);overflow:auto;text-align:left}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:20;height:48px;background:var(--navy);color:#FEFAE0;display:flex;align-items:center;justify-content:space-between;padding:0 15px;font-size:12px}
+.topbar b{letter-spacing:.8px}.pill{border:1px solid #ffffff35;background:#ffffff15;border-radius:999px;padding:4px 9px}
+h1,h2,h3,h4{font-family:Inter,sans-serif;text-transform:none;margin:0;color:#283618;letter-spacing:-.02em}h1{font-size:clamp(34px,5vw,66px);line-height:1.02}h2{font-size:clamp(25px,3.5vw,44px);line-height:1.05}h3{font-size:clamp(16px,2vw,23px)}h4{font-size:14px}
+.sub{color:var(--muted);font-size:clamp(13px,1.5vw,17px)}.boardno{font-size:11px;font-weight:800;letter-spacing:2px;color:#283618;margin-bottom:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card,.rule,.ref,.swot,.validation{background:white;border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:0 3px 14px #28361810}
+.card{font-size:12.5px;line-height:1.42}.card b,.rule b,.ref b{color:var(--navy)}
+.rule{border-left:7px solid var(--yellow)}.rule p,.ref p{font-size:12.5px;line-height:1.4;margin:.45em 0}.tag{display:inline-block;border-radius:999px;background:var(--navy);color:#FEFAE0;padding:4px 8px;font-size:10px;font-weight:800;letter-spacing:.5px}.tag.y{background:var(--yellow);color:#283618}.tag.t{background:var(--terra);color:#FEFAE0}
+.note{background:#FEFAE0;border-left:4px solid var(--yellow);padding:9px 12px;border-radius:0 8px 8px 0;font-size:12px;line-height:1.4}
+.source{font-size:10px;color:var(--muted);margin-top:7px;display:block}
+.boardhead{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;border-bottom:2px solid var(--navy);padding-bottom:9px;margin-bottom:12px}.boardhead .lead{max-width:700px}
+.map{height:210px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#eee}.map iframe{width:100%;height:100%;border:0}
+.plan{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:10px;min-height:210px}
+.plan svg{width:100%;height:100%;min-height:185px}.plan text{font-family:Inter,sans-serif}
+table{width:100%;border-collapse:collapse;font-size:11px;background:white;border:1px solid var(--line);border-radius:10px;overflow:hidden}th{background:#DDA15E;color:#283618;text-align:left;padding:7px 9px;text-transform:uppercase;font-size:9px;letter-spacing:1px}td{padding:7px 9px;border-top:1px solid var(--line)}
+.dim{padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:var(--paper);font-size:11px;line-height:1.32}.dim b{display:block;color:#283618;font-size:10px;letter-spacing:.5px;margin-bottom:3px}
+.dark{background:var(--navy);color:#FEFAE0;border-radius:16px;padding:18px}.dark h2,.dark h3{color:#FEFAE0}.dark p,.dark li{color:#FEFAE0d0;font-size:12px;line-height:1.4}
+.swot{min-height:150px}.swot h3{font-size:15px;margin-bottom:6px}.swot ul{padding-left:17px;margin:5px 0;font-size:11.5px;line-height:1.45}
+.massing{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px}.massing svg{width:100%;height:180px}.massing h3{margin:5px 0}
+.photo{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.photo img{width:100%;height:230px;object-fit:cover;display:block;background:#FEFAE0}
+.photo .cap{padding:9px 12px;font-size:11px;line-height:1.45}
+.photo .cap b{color:#283618}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:11.5px;line-height:1.4;padding:7px 0;border-bottom:1px solid var(--line)}.check:last-child{border-bottom:0}
+.quote{font-family:'Playfair Display',Georgia,serif;font-style:italic;color:#283618;font-size:clamp(17px,2vw,24px);line-height:1.35}
+@media(max-width:800px){.grid2,.grid3,.grid4{grid-template-columns:1fr}.topbar .pill{display:none}.reveal .slides section{padding:10px 4vw 60px}}
+</style>
+</head>
+<body>
+<div class="topbar"><b>IAAA · GROUP 04 · ÉVORA / ALENTEJO CENTRAL</b></div>
+<div class="reveal"><div class="slides">
+
+<!-- BOARD 1 -->
+<section>
+  <div class="boardhead"><div class="lead"><div class="boardno">BOARD 1 · TERRITORY AND PLACE</div><h2>NUTS → plans → figure-ground → place</h2><p class="sub">Rua Frei Miguel 38, Évora · Historic Centre · NUTS III Alentejo Central (PT186)</p></div><div class="tag y">P2 · SITE</div></div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>NUTS frame</h3>
+      <p><b>NUTS I:</b> Continente → <b>NUTS II:</b> Alentejo → <b>NUTS III:</b> Alentejo Central · <b>PT186</b>.</p>
+      <p><b>Site:</b> 38.5557417, −7.9234028 · ≈251–252 m · União das Freguesias de Évora — São Mamede, Sé, São Pedro e Santo Antão.</p>
+      <p><b>Urban context:</b> historic-centre hilltop / plateau; the deck identifies Évora as UNESCO Historic Centre (1986).</p>
+      <span class="source">Source basis: existing P2 deck; coordinates and altitude are flagged there as survey/confirmation items.</span>
+    </div>
+    <div class="card">
+      <h3>INE / Pordata snapshot</h3>
+      <table>
+        <tr><th>Territory</th><th>Population</th><th>Reference</th><th>Change</th></tr>
+        <tr><td>Évora</td><td><b>53,577</b></td><td>INE Censos 2021</td><td>−5.3%</td></tr>
+        <tr><td>Alentejo Central</td><td><b>152,444</b></td><td>INE Censos 2021</td><td>−8.6%</td></tr>
+        <tr><td>Freguesia intramuros</td><td><b>4,738</b></td><td>2011</td><td>—</td></tr>
+        <tr><td>Freguesia intramuros</td><td><b>1.13 km²</b></td><td>2011</td><td>—</td></tr>
+      </table>
+      <span class="source">Use Pordata as the presentation label only where the underlying indicator is confirmed against the database; the source deck explicitly cites INE Censos 2021 for the first two figures.</span>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:12px">
+    <div>
+      <h3 style="margin-bottom:6px">Plan · 500 m — aerial (N ↑)</h3>
+      <div class="photo">
+        <img src="lote_aerea_500m.jpg.png" alt="Aerial R Duarte Lobo / R Frei Miguel — vacant through-lot N-S with red pin">
+        <div class="cap"><b>Fig. 1 — Aerial 500 m: vacant through-lot N–S, R. Frei Miguel 38.</b><br>
+        Through-lot N–S: N = R. Duarte Lobo, S = R. Frei Miguel. Vacant strip with red pin between party-wall houses 1–2 floors, tile roofs.<br>
+        <span class="source">Source: Google Maps / Airbus, Maxar Technologies, Dados do mapa ©2026 Google.</span></div>
+      </div>
+      <div class="map" style="margin-top:8px"><iframe src="https://www.google.com/maps?q=Rua+Frei+Miguel+38,+Évora,+Portugal&z=15&output=embed" loading="lazy"></iframe></div>
+      <div class="note" style="margin-top:7px">1 km: historic-centre urban fabric. 500 m: block, dual-frontage infill, semi-continuous street wall.</div>
+    </div>
+    <div>
+      <h3 style="margin-bottom:6px">Figure-ground + ground photo (S → N/NE)</h3>
+      <div class="plan">
+        <svg viewBox="0 0 500 210">
+          <rect width="500" height="210" fill="#FEFAE0"/>
+          <g fill="#606C38">
+            <rect x="18" y="20" width="75" height="48"/><rect x="112" y="12" width="55" height="62"/><rect x="185" y="25" width="82" height="43"/>
+            <rect x="285" y="14" width="60" height="55"/><rect x="365" y="23" width="105" height="46"/>
+            <rect x="10" y="84" width="58" height="55"/><rect x="83" y="78" width="72" height="66"/><rect x="174" y="87" width="52" height="48"/>
+            <rect x="245" y="78" width="73" height="64"/><rect x="340" y="84" width="48" height="54"/><rect x="410" y="79" width="74" height="65"/>
+          </g>
+          <rect x="174" y="87" width="52" height="48" fill="#DDA15E" stroke="#283618" stroke-width="3"/>
+          <text x="200" y="116" font-size="16" text-anchor="middle" font-weight="800" fill="#283618">38</text>
+          <path d="M0 73 H500 M73 0 V210 M330 0 V210" stroke="#DDA15E" stroke-width="3" opacity=".6"/>
+          <text x="10" y="202" font-size="10" fill="#606C38">Built mass / street voids · schematic reading pending DGT orthophoto + PDM plan</text>
+        </svg>
+      </div>
+      <div class="photo" style="margin-top:8px">
+        <img src="lote_frei_miguel_2014.jpg.png" alt="Street View 06/2014 from R Frei Miguel 38 looking N/NE across vacant lot">
+        <div class="cap"><b>Fig. 2 — Ground view S → N/NE from 38 R. Frei Miguel, 06/2014.</b><br>
+        Dry ruderal grass to R. Duarte Lobo. White party-walls, 1–2 storey tile houses.<br>
+        <span class="source">Source: Google Street View 06/2014 — 38 R. Frei Miguel, Évora.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin:14px 0 7px">Nine place dimensions</h3>
+  <div class="grid3">
+    <div class="dim"><b>01 · Colour</b>lime wash, ochre band, grey plinth, tile, timber, iron</div>
+    <div class="dim"><b>02 · Soils</b>Évora Massif gneiss/migmatite; regional Mediterranean soils</div>
+    <div class="dim"><b>03 · Vegetation / fauna</b>olive, jacaranda, orange; urban birds, bats, lizard</div>
+    <div class="dim"><b>04 · Seismic</b>active intraplate context; NP EN 1998-1 response</div>
+    <div class="dim"><b>05 · Flood</b>hilltop, low flood exposure; manage intense street runoff</div>
+    <div class="dim"><b>06 · Fire</b>very low / low rural hazard in consolidated urban area; urban SCIE dominates</div>
+    <div class="dim"><b>07 · Pollution / noise</b>traffic, works, HVAC, waste; no dated measurement</div>
+    <div class="dim"><b>08 · Services</b>commerce, health, school, university, culture and bus within walking distance</div>
+    <div class="dim"><b>09 · Morphology</b>party-wall 1–2 storey fabric, lime/earth/brick, courtyard and barrel tile</div>
+  </div>
+  <span class="source">Source basis: P2 deck, dimensions 01–09. Several plot-specific values remain explicitly marked “pending / unverified” in the source.</span>
+</section>
+
+<!-- BOARD 2 -->
+<section>
+  <div class="boardhead"><div class="lead"><div class="boardno">BOARD 2 · CLIMATE</div><h2>EPW synthesis → two massing rules</h2><p class="sub">Typical sequences from EPW; extremes and tolerance checked against IPMA normals</p></div><div class="tag t">P3 · CLIMATE</div></div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>EPW synthesis</h3>
+      <table>
+        <tr><th>Signal</th><th>Evidence in source deck</th><th>Design consequence</th></tr>
+        <tr><td><b>Summer heat</b></td><td>2nd–3rd week July mean maxima 38.0–38.9 °C; peaks 40.3–42.1 °C</td><td>shade + thermal mass</td></tr>
+        <tr><td><b>Solar</b></td><td>summer noon ≈74.9°; winter ≈27.6°</td><td>deep horizontal shade; admit winter sun</td></tr>
+        <tr><td><b>Wind</b></td><td>summer NW wind / “nortada” ≈3.0–3.6 m/s</td><td>cross-ventilation toward N/NW</td></tr>
+        <tr><td><b>Night cooling</b></td><td>mild summer nights; useful free-cooling about May–Oct</td><td>night purge + mass</td></tr>
+        <tr><td><b>Rain</b></td><td>annual order 530–600 mm; summer drought</td><td>cistern + controlled drainage</td></tr>
+        <tr><td><b>Cold</b></td><td>34–38 nights below 5 °C; IPMA records down to −4.2 °C</td><td>retain winter solar gain; protect roof/water lines</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>EPW × IPMA cross-check</h3>
+      <div class="check"><span class="tag">CONVERGES</span><span>Monthly means nearly superimposed; Csa; summer drought; warm July–August nights; peak heat window 10–31 July.</span></div>
+      <div class="check"><span class="tag t">DIVERGES</span><span>EPW annual rainfall about 10–12% lower than IPMA normals; TMY frost-free while IPMA records frost and a 45.4 °C maximum.</span></div>
+      <div class="check"><span class="tag y">USE</span><span><b>EPW for typical sequences;</b> <b>IPMA for tolerance / extremes.</b> Airport EPW is altitude-matched to the site.</span></div>
+      <span class="source">Primary EPW: PRT_AL_Evora.085570_TMYx.2011–2025; altitude-matched EPW: PRT_AL_Evora.AP.085580_TMYx.2011–2025; IPMA normals 1991–2020 / 1981–2010.</span>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div class="rule">
+      <span class="tag y">RULE 01</span><h3 style="margin-top:7px">Compact E–W volume, closed S/E, open N/NW</h3>
+      <p><b>Form:</b> a compact two-storey mass with a protected interior patio; keep south/east openings shallow and direct living terraces / cross-ventilation toward the NW summer wind.</p>
+      <p><b>Why:</b> combine the historic-centre compactness with the documented summer wind and the need to control solar exposure.</p>
+    </div>
+    <div class="rule">
+      <span class="tag y">RULE 02</span><h3 style="margin-top:7px">Thermal mass + deep horizontal shade</h3>
+      <p><b>Form:</b> high-inertia envelope, deep eaves/courtyard shade, no unshaded west glazing, winter-protected roof and water lines.</p>
+      <p><b>Why:</b> respond to 40–45 °C tolerance conditions while retaining low winter sun and enabling night-flush cooling.</p>
+    </div>
+  </div>
+  <div class="note" style="margin-top:12px"><b>Climate-to-form statement:</b> the courtyard is not an ornamental void; it is the mediator between thermal mass, shade, winter solar access and summer night ventilation.</div>
+</section>
+
+<!-- BOARD 3 -->
+<section>
+  <div class="boardhead"><div class="lead"><div class="boardno">BOARD 3 · CULTURE</div><h2>Vernacular rules → two works → one trend</h2><p class="sub">Culture is treated as a set of transferable architectural operations, not a style catalogue.</p></div><div class="tag y">P4 · CULTURE</div></div>
+
+  <div class="grid3">
+    <div class="rule"><span class="tag y">RULE 01</span><h3 style="margin-top:7px">Local, low-energy material</h3><p>Earth, stone, lime, timber and clay tile are the material family identified in the source deck. The proposal should retain the short-distance / repair logic where feasible.</p></div>
+    <div class="rule"><span class="tag y">RULE 02</span><h3 style="margin-top:7px">Climate before equipment</h3><p>Thick wall, whitewash, small/high openings, patio and adjustable shading: use mass, lime and air before adding mechanical dependence.</p></div>
+    <div class="rule"><span class="tag y">RULE 03</span><h3 style="margin-top:7px">Passive, reversible, repairable</h3><p>Prefer dry or lime-based assemblies and layers that can be repaired without locking the historic fabric into irreversible concrete construction.</p></div>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div class="ref">
+      <span class="tag">WORK 01</span><h3 style="margin-top:7px">Bairro da Malagueira · Álvaro Siza · Évora</h3>
+      <div class="photo" style="margin:8px 0">
+        <img src="bairro_malagueira_2_evora.jpg" alt="Bairro da Malagueira, Évora — Álvaro Siza housing">
+        <div class="cap"><b>Fig. 3 — Bairro da Malagueira, Évora.</b> White courtyard row-houses and concrete infrastructural backbone.<br>
+        <span class="source">Source: source deck image · Bairro da Malagueira, Siza.</span></div>
+      </div>
+      <p><b>1977–2005 · 1,200 homes · 27 ha.</b> White party-wall masses, courtyard row houses and the aqueduct/service channel as an infrastructural backbone.</p>
+      <p><b>Transferable operation:</b> one strong spatial/infrastructural element can organise programme, services and identity without copying the historic form literally.</p>
+      <span class="source">Credit in source deck: ArchDaily / Plataforma Urbanística de Évora. Map: OpenStreetMap.</span>
+    </div>
+    <div class="ref">
+      <span class="tag">WORK 02</span><h3 style="margin-top:7px">Jardim Diana / Roman Temple · João Luís Carrilho da Graça</h3>
+      <div class="photo" style="margin:8px 0">
+        <img src="Templo_de_Diana,_Évora-55.jpg" alt="Roman Temple of Évora / Templo de Diana">
+        <div class="cap"><b>Fig. 4 — Templo de Évora / Jardim Diana.</b> Roman temple on stone podium with Sé and historic centre behind.<br>
+        <span class="source">Source: source deck image · Templo de Diana, Évora.</span></div>
+      </div>
+      <p><b>2010.</b> A continuous limestone platform recovers a datum around archaeological remains, with minimal additions and a precise material dialogue.</p>
+      <p><b>Transferable operation:</b> make one exact move that clarifies heritage rather than competing with it.</p>
+      <span class="source">Credit in source deck: Carrilho da Graça Architects. Map: OpenStreetMap.</span>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div class="card">
+      <span class="tag t">ONE TREND</span>
+      <h3 style="margin-top:7px">Earth: vernacular → contemporary</h3>
+      <p>The source deck identifies a contemporary return to earth construction through compressed stabilised earth blocks, rammed earth with minimal cement, prefab panels and hybrid earth–timber systems.</p>
+      <p><b>Trend reading:</b> earth is presented as a performance and low-carbon material system, not simply as a heritage image.</p>
+      <span class="source">Trend credits in source deck: ArchDaily / plâno; Jornal de Notícias (2021); New Civil Engineer (2021).</span>
+    </div>
+    <div class="dark">
+      <h3>Culture translated into the project</h3>
+      <ul>
+        <li>Keep the street-facing white/ochre register and party-wall scale.</li>
+        <li>Recover the patio as passive climate infrastructure.</li>
+        <li>Use lime, earth and timber as repairable layers where the existing construction allows.</li>
+        <li>Take the Malagueira lesson of an organising backbone, and the Jardim Diana lesson of one precise move.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BOARD 4 -->
+<section>
+  <div class="boardhead"><div class="lead"><div class="boardno">BOARD 4 · SYNTHESIS</div><h2>SWOT → two massing options → programme → declaration → validation</h2><p class="sub">A decision board: every move is traceable to the territory, climate and culture boards.</p></div><div class="tag t">P4 · SYNTHESIS</div></div>
+
+  <div class="grid4">
+    <div class="swot"><h3>STRENGTHS</h3><ul><li>Living historic-centre context</li><li>Services on foot</li><li>Proven courtyard / party-wall typology</li><li>Csa climate offers passive-cooling potential</li></ul></div>
+    <div class="swot"><h3>WEAKNESSES</h3><ul><li>Seismic constraint</li><li>Damp / rising moisture sensitivity</li><li>Extreme west heat</li><li>Plot-specific survey still incomplete</li></ul></div>
+    <div class="swot"><h3>OPPORTUNITIES</h3><ul><li>Repair and reuse existing fabric</li><li>Patio as climate core</li><li>Earth/lime/timber compatibility</li><li>Housing + studio/workshop</li></ul></div>
+    <div class="swot"><h3>THREATS</h3><ul><li>Over-sealing the courtyard</li><li>Irreversible concrete reinforcement</li><li>Uncontrolled west glazing / overheating</li><li>Heritage conflict if scale/openings drift</li></ul></div>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div class="massing">
+      <span class="tag y">OPTION A · COURTYARD BAR</span><h3>Compact perimeter + protected patio</h3>
+      <svg viewBox="0 0 500 180">
+        <rect x="35" y="28" width="430" height="120" rx="3" fill="#DDA15E" stroke="#283618" stroke-width="2"/>
+        <rect x="145" y="55" width="210" height="66" fill="#FEFAE0" stroke="#283618" stroke-width="2"/>
+        <path d="M70 40 H430 M70 136 H430" stroke="#BC6C25" stroke-width="5"/>
+        <path d="M395 42 V134" stroke="#283618" stroke-width="3" stroke-dasharray="6 5"/>
+        <text x="250" y="90" text-anchor="middle" font-size="13" font-weight="800" fill="#283618">PATIOS / CLIMATE CORE</text>
+        <text x="250" y="108" text-anchor="middle" font-size="10" fill="#606C38">N/NW opening · S/E protection</text>
+        <text x="250" y="168" text-anchor="middle" font-size="10" fill="#606C38">most compact · strongest courtyard logic</text>
+      </svg>
+      <p><b>Derived from:</b> climate Rule 01 + Rule 02; Alentejo intra-muros party-wall morphology.</p>
+    </div>
+    <div class="massing">
+      <span class="tag y">OPTION B · SPLIT VOLUMES</span><h3>Front street volume + rear climate volume</h3>
+      <svg viewBox="0 0 500 180">
+        <rect x="40" y="42" width="145" height="94" fill="#DDA15E" stroke="#283618" stroke-width="2"/>
+        <rect x="315" y="35" width="145" height="101" fill="#DDA15E" stroke="#283618" stroke-width="2"/>
+        <rect x="185" y="58" width="130" height="60" fill="#FEFAE0" stroke="#283618" stroke-width="2"/>
+        <path d="M60 52 H165" stroke="#BC6C25" stroke-width="5"/>
+        <path d="M335 45 H440" stroke="#BC6C25" stroke-width="5"/>
+        <path d="M195 67 H305" stroke="#606C38" stroke-width="4"/>
+        <text x="112" y="92" text-anchor="middle" font-size="11" font-weight="800" fill="#283618">STREET</text>
+        <text x="388" y="92" text-anchor="middle" font-size="11" font-weight="800" fill="#283618">REAR</text>
+        <text x="250" y="92" text-anchor="middle" font-size="11" font-weight="800" fill="#283618">PATIO</text>
+        <text x="250" y="168" text-anchor="middle" font-size="10" fill="#606C38">more permeability · stronger N/NW ventilation path</text>
+      </svg>
+      <p><b>Derived from:</b> same rules, with greater separation between public/work and domestic/rear zones.</p>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div class="card">
+      <span class="tag">PROGRAMME</span>
+      <h3 style="margin-top:7px">Dwelling + studio / workshop</h3>
+      <table>
+        <tr><th>Layer</th><th>Role</th><th>Place logic</th></tr>
+        <tr><td>Street / ground</td><td>studio, workshop or small productive use</td><td>active frontage, service access</td></tr>
+        <tr><td>Domestic</td><td>living, kitchen, bedrooms</td><td>protected courtyard / upper level</td></tr>
+        <tr><td>Climate core</td><td>patio, shade, planting, cistern</td><td>cross-ventilation + thermal moderation</td></tr>
+        <tr><td>Roof</td><td>water collection + protected services</td><td>light, reversible intervention</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <span class="tag t">DECLARATION</span>
+      <p class="quote" style="margin:10px 0">“A compact Évora house that keeps the street memory, turns the courtyard into climate infrastructure, and adds only reversible layers of earth, lime and timber.”</p>
+      <p style="font-size:11.5px">The declaration condenses the documented site, climate and vernacular rules into one project position; it is a design statement, not a source quotation.</p>
+    </div>
+  </div>
+
+  <div class="dark" style="margin-top:14px">
+    <p class="quote" style="color:#FEFAE0;margin:0">The four boards read as one chain: <b>place defines constraints → climate defines massing → culture defines the architectural language and construction logic → synthesis turns those rules into a testable project.</b></p>
+    <span class="source" style="color:#FEFAE099">Source basis: uploaded P2/P3/P4 deck. Credits retained/condensed from the source: INE, IPMA, DGT, CM Évora, SIPA/DGPC, ArchDaily, Carrilho da Graça Architects, OpenStreetMap, and trend sources named in P4.</span>
+  </div>
+</section>
+
+<!-- VISUALIZATION -->
+<section>
+  <div class="boardhead"><div class="lead"><div class="boardno">VISUALIZATION · PROJECT VISION</div><h2>Architectural visualization</h2></div><div class="tag t">VISION · RENDER</div></div>
+
+  <div class="grid3" style="grid-template-columns:repeat(3,1fr);align-items:stretch">
+    <div>
+      <div style="text-align:center;margin-bottom:6px"><span class="tag y">original</span></div>
+      <div class="photo" style="display:flex;flex-direction:column;border:0;background:transparent;box-shadow:none;padding:0;border-radius:0;overflow:visible">
+        <img src="viz_clay.jpg" alt="Clay-red lattice study — permeable timber screen version of the gable volume" style="height:320px;width:100%;object-fit:cover;flex-shrink:0;border-radius:12px">
+        <div class="cap" style="min-height:52px;flex:1;padding:9px 2px"><b>Fig. 5</b></div>
+      </div>
+    </div>
+    <div>
+      <div style="text-align:center;margin-bottom:6px"><span class="tag t">render</span></div>
+      <div class="photo" style="display:flex;flex-direction:column;border:0;background:transparent;box-shadow:none;padding:0;border-radius:0;overflow:visible">
+        <img src="viz_daylight.jpg" alt="Daylight view — timber gable house with tile roof and glazed ground floor" style="height:320px;width:100%;object-fit:cover;flex-shrink:0;border-radius:12px">
+        <div class="cap" style="min-height:52px;flex:1;padding:9px 2px"><b>Fig. 6</b></div>
+      </div>
+    </div>
+    <div>
+      <div style="text-align:center;margin-bottom:6px"><span class="tag t">render</span></div>
+      <div class="photo" style="display:flex;flex-direction:column;border:0;background:transparent;box-shadow:none;padding:0;border-radius:0;overflow:visible">
+        <img src="viz_evening.jpg" alt="Evening view — same house glowing from interior at dusk" style="height:320px;width:100%;object-fit:cover;flex-shrink:0;border-radius:12px">
+        <div class="cap" style="min-height:52px;flex:1;padding:9px 2px"><b>Fig. 7</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:12px;border-radius:4px;border-left:7px solid var(--terra)">
+    <span class="tag t">PROMPT · FIG. 6</span>
+    <h3 style="margin:7px 0">Prompt — Architectural render alteration</h3>
+    <p style="font-size:12.5px;line-height:1.45">Edit the original architectural render I provided, keeping the overall composition, camera framing and urban and landscape context. The goal is to transform the building into a more habitable, welcoming construction, closer to a contemporary traditional house, without losing the original architectural identity.</p>
+    <p style="font-size:12.5px;line-height:1.45"><b>Materiality</b><br>Replace the current materiality with vertical timber slats in a warm light-brown tone, similar to treated natural wood, and replace the roof with traditional Portuguese clay tile.<br>Apply the slats coherently across the facades and the roof, creating continuity between the two elements.<br>Ensure the wood shows realistic texture, depth, shadows and natural variation.<br>Keep the existing roof openings, including the gaps between the slats, to allow natural light in.</p>
+    <p style="font-size:12.5px;line-height:1.45"><b>2. Architectural transformation</b><br>Make the building taller and volumetrically closer to a traditional house</p>
+  </div>
+  <div class="card" style="margin-top:12px;border-radius:4px;border-left:7px solid var(--terra)">
+    <span class="tag t">PROMPT · FIG. 7</span>
+    <h3 style="margin:7px 0">blue hour attempt</h3>
+    <p style="font-size:12.5px;line-height:1.45">PROMPT -- Hyper-realistic architectural rendering of image_5.png at blue hour, keeping the composition, architecture, vegetation, paths and all people in their original positions. Cobalt-blue sky, cool soft ambient light, timber interior lit by intense amber light, exterior lamps on and warm reflections on glass and wood. Cinematic blue-vs-gold contrast, professional photographic quality, long exposure and extreme detail.</p>
+  </div>
+  <hr style="margin:18px 0 12px;border:0;border-top:2px solid var(--navy)">
+  <div class="grid2" style="grid-template-columns:repeat(2,1fr);align-items:start">
+    <div>
+      <div style="text-align:center;margin-bottom:6px"><span class="tag y">original</span></div>
+      <div class="photo" style="display:flex;flex-direction:column;border:0;background:transparent;box-shadow:none;padding:0;border-radius:0;overflow:visible">
+        <img src="viz_interior_sketch.jpg" alt="Black and white interior sketch — double-height living with mezzanine" style="height:320px;width:100%;object-fit:cover;flex-shrink:0;border-radius:12px">
+        <div class="cap" style="min-height:32px;flex:1;padding:9px 2px"><b>Fig. 8</b></div>
+      </div>
+    </div>
+    <div>
+      <div style="text-align:center;margin-bottom:6px"><span class="tag t">render</span></div>
+      <div class="photo" style="display:flex;flex-direction:column;border:0;background:transparent;box-shadow:none;padding:0;border-radius:0;overflow:visible">
+        <img src="viz_interior.jpg" alt="Cozy lived-in interior render — double-height living with bookshelves and family" style="height:320px;width:100%;object-fit:cover;flex-shrink:0;border-radius:12px">
+        <div class="cap" style="min-height:32px;flex:1;padding:9px 2px"><b>Fig. 9</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:12px;border-radius:4px;border-left:7px solid var(--terra)">
+    <span class="tag t">PROMPT · FIG. 8–9</span>
+    <h3 style="margin:7px 0">Interior — warm lived-in open space</h3>
+    <p style="font-size:12.5px;line-height:1.45">Photographic, realistic architectural interior render of a warm, cozy, and lived-in multi-level open-space house based on an architectural layout, bathed in soft, natural daylight entering from a modern sliding glass door system on the left. The ceiling showcases exposed light wood beams, while the interior walls feature textured white plaster accented by an exposed rough stone feature wall surrounding the window frames. Ascending to the mezzanine is a warm wooden staircase with a sleek transparent glass railing. In the foreground on the left sits a deep, dark purple sofa with cozy cushions and throws, while in the center of the living room a three-year-old child and a six-year-old child play happily on an earthy rug with a small playful puppy and toys. Near the living area, a large rustic wooden dining table is accompanied by black leather chairs and decorated with a dark purple ceramic vase filled with vibrant branches and flowers. In the background corner under the mezzanine rests an iconic Mies van der Rohe Barcelona armchair in black leather and steel, beside an indoor garden dense with lush, colorful green plants and monsteras. Under the staircase gallery, in place of a desk, an elderly grandfather is sitting and playing an upright wooden piano. Towering wooden bookshelves filled with books cover the far wall, creating a lively, lived-in, cinematic family atmosphere, shot on 35mm lens, high-end photography, ultra-detailed textures, warm atmospheric lighting</p>
+  </div>
+  <hr style="margin:18px 0 12px;border:0;border-top:2px solid var(--navy)">
+  <div class="grid4" style="grid-template-columns:repeat(4,1fr);align-items:start">
+    <div>
+      <div style="text-align:center;margin-bottom:6px"><span class="tag y">original</span></div>
+      <div class="photo" style="display:flex;flex-direction:column;border:0;background:transparent;box-shadow:none;padding:0;border-radius:0;overflow:visible">
+        <img src="viz_pavilion_3d.jpg" alt="Black and white 3D model — timber pavilion sequence" style="height:240px;width:100%;object-fit:cover;flex-shrink:0;border-radius:12px">
+        <div class="cap" style="min-height:32px;flex:1;padding:9px 2px"><b>Fig. 10 · 3D model</b></div>
+      </div>
+    </div>
+    <div>
+      <div style="text-align:center;margin-bottom:6px"><span class="tag">photo reference</span></div>
+      <div class="photo" style="display:flex;flex-direction:column;border:0;background:transparent;box-shadow:none;padding:0;border-radius:0;overflow:visible">
+        <img src="viz_pavilion_ref1.jpg" alt="Reference — Palazzo Ca Tron facade and well" style="height:240px;width:100%;object-fit:cover;flex-shrink:0;border-radius:12px">
+        <div class="cap" style="min-height:32px;flex:1;padding:9px 2px"><b>Fig. 11 · photo reference</b></div>
+      </div>
+    </div>
+    <div>
+      <div style="text-align:center;margin-bottom:6px"><span class="tag">photo reference</span></div>
+      <div class="photo" style="display:flex;flex-direction:column;border:0;background:transparent;box-shadow:none;padding:0;border-radius:0;overflow:visible">
+        <img src="viz_pavilion_ref2.jpg" alt="Reference — garden courtyard paving and well" style="height:240px;width:100%;object-fit:cover;flex-shrink:0;border-radius:12px">
+        <div class="cap" style="min-height:32px;flex:1;padding:9px 2px"><b>Fig. 12 · photo reference</b></div>
+      </div>
+    </div>
+    <div>
+      <div style="text-align:center;margin-bottom:6px"><span class="tag t">render</span></div>
+      <div class="photo" style="display:flex;flex-direction:column;border:0;background:transparent;box-shadow:none;padding:0;border-radius:0;overflow:visible">
+        <img src="viz_pavilion_render.jpg" alt="Render — contemporary timber pavilion in historic garden" style="height:240px;width:100%;object-fit:cover;flex-shrink:0;border-radius:12px">
+        <div class="cap" style="min-height:32px;flex:1;padding:9px 2px"><b>Fig. 13 · render</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:12px;border-radius:4px;border-left:7px solid var(--terra)">
+    <span class="tag t">PROMPT · FIG. 10–13</span>
+    <h3 style="margin:7px 0">Pavilion — Palazzo Ca’ Tron, Venice</h3>
+    <p style="font-size:12.5px;line-height:1.45">Create a realistic render of a contemporary pavilion installed in the historic garden of Palazzo Ca’ Tron, in Venice, Italy. The pavilion is a light, open architectural intervention, composed of a rhythmic sequence of tall vertical timber panels, slender dark-timber structural beams and an upper roof structure clad with translucent fabric panels that allow natural light through.</p>
+    <p style="font-size:12.5px;line-height:1.45">Strictly preserve the geometry shown in the reference image. The timber panels should create a succession of partially enclosed spaces, forming framed perspectives that lead the eye toward the historic palace facade and the central garden well.<br>Use dark walnut tones for all vertical panels and structural elements, with a deep brown hue, slightly darker than natural oak. The finish should be matte, elegant and realistic, with subtle longitudinal grain, discreet colour variation and a material-scale coherent texture.</p>
+    <p style="font-size:12.5px;line-height:1.45">The roof should be made of translucent fabric in warm white tones, stretched between the timber beams. The fabric should filter natural light and produce a diffuse luminosity, remaining visually distinct from the timber elements</p>
+    <p style="font-size:12.5px;line-height:1.45">The historic facade should show aged plaster, small areas of exposed brick, worn stone and natural imperfections consistent with Venetian architecture. The pavement should be light stone, with visible joints, slight tonal variation and wear marks. All materials should respond to light in a physically plausible way, with coherent reflections, roughness, contact shadows and weathering.</p>
+    <p style="font-size:12.5px;line-height:1.45">Show a sunny afternoon, with warm low natural light striking laterally across the garden and passing through the surrounding vegetation and the translucent textile roof.<br>Create a subtle play of leaf shadows cast by the trees onto the timber panels, the stone pavement and the garden walls. The roof should filter the light and gain a soft luminosity in the lit areas, without looking artificially lit.</p>
+  </div>
+  <!-- ADD MORE INFO BELOW THIS LINE -->
+</section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.min.js"></script>
+<script>
+const mobile=matchMedia('(max-width:800px)').matches;
+Reveal.initialize({hash:true,slideNumber:true,controls:true,progress:true,center:false,width:1280,height:720,margin:.035,minScale:.2,maxScale:2,touch:true,keyboard:true,overview:true,transition:mobile?'none':'slide'});
+</script>
+</body>
+</html>
